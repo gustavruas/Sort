@@ -33,10 +33,12 @@ int bubble_sort(char rgm[9])
             }
         }
     }
-    printf("rgm ordenado: %s\n", rgm); 
+    printf("rgm ordenado bubble-sort: %s\n", rgm); 
     clock_t t1 = clock();
     double tempo_ms = 1000.0 * (t1-t0) / CLOCKS_PER_SEC;
-    printf("%lf", tempo_ms);
+    printf("Tempo bubble-sort: %lf\n", tempo_ms);
+    printf("Quantidade de passos count: %lld\n", count_cmp);
+    printf("Quantidade de passos swap: %lld\n", count_swap);
     return 0;
 }
 
@@ -63,15 +65,18 @@ int insert_sort(char rgm[9])
             count_swap++;
         } rgm[j+1] = e;
     }
-    printf("rgm ordenado: %s\n", rgm);
+    printf("rgm ordenado insert-sort: %s\n", rgm);
     clock_t t1 = clock();
     double tempo_ms = 1000.0 * (t1-t0) / CLOCKS_PER_SEC;
-    printf("%lf", tempo_ms);
+    printf("Tempo insert-sort: %lf\n", tempo_ms);
+    printf("Quantidade de passos count: %lld\n", count_cmp);
+    printf("Quantidade de passos swap: %lld\n", count_swap);
     return 0;
 }
 
 int main()
 {
-    bubble_sort("46456732");
-    insert_sort("46456732");
+    char rgm1[] ="46456732";
+    bubble_sort(rgm1);
+    insert_sort(rgm1);
 }
