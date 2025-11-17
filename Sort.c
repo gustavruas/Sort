@@ -21,7 +21,7 @@ int bubble_sort(char rgm[9])
 
     for (int i = 0; i < 7; i++)
     {
-        for (j = 0; j - i - 1; j++)
+        for (j = 0; j < 7 - i - 1; j++)
         {
             count_cmp++;
             if (rgm[j] > rgm[j + 1])
